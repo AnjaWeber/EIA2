@@ -4,25 +4,26 @@ body {
 }
 h1 {
     position: relative;
+    color: white;
 }
 
 div {
    position: absolute;
     height: 80%;
-    width: 35%;
+    width: 37%;
     top: 100px;
 }
 
 #div0 {
     background-color: rgb(208, 184, 236);
-    border-color: black;
+    border-color: rgb(255, 255, 255);
     border-style: solid;
     margin-left: 10%;
 }
 
 #div1 {
     background-color: rgb(196, 238, 255);
-    border-color: black;
+    border-color: rgb(255, 255, 255);
     border-style: solid;
     margin-left: 50%;  
 }

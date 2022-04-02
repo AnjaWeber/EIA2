@@ -2,7 +2,7 @@ var L02_EventInspector;
 (function (L02_EventInspector) {
     window.addEventListener("load", handleLoad);
     function handleLoad(_event) {
-        var body = document.querySelector("body");
+        var body = document.body;
         var div0 = document.querySelector("#div0");
         var div1 = document.querySelector("#div1");
         var button = document.querySelector("button");

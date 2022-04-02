@@ -4,7 +4,7 @@ namespace L02_EventInspector {
 
 
     function handleLoad(_event: Event): void {
-        let body: HTMLElement = <HTMLElement>document.querySelector("body");
+        let body: HTMLElement = <HTMLElement>document.body;
         let div0: HTMLDivElement = <HTMLDivElement>document.querySelector("#div0");
         let div1: HTMLDivElement = <HTMLDivElement>document.querySelector("#div1");
         let button: HTMLButtonElement = <HTMLButtonElement>document.querySelector("button");
