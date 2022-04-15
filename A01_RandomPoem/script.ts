@@ -13,7 +13,7 @@ namespace RandomPoem {
     for (let index: number = subject.length; index >= 1; index--) {
         //console.log(index);
         let result: string = getVerse(subject, predicate, object);
-        console.log(result)
+        console.log(result);
     }
    
     function getVerse(_subject: string[], _predicate: string[], _object: string[]): string {
