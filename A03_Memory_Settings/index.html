@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MemorySettings</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="configForm">
+        <h1>Memory Settings</h1>
+        <form>
+            <fieldset>
+                <legend>Paaranzahl</legend>
+                <input type="number" name="pairCount" min="5" max="25" step="1" value="10">
+            </fieldset>
+            <fieldset>
+                <legend>Kartengröße</legend>
+                50px
+                <input type="range" name="cardSize" min="50" max="250" step="50" value="100">
+                250px
+            </fieldset>
+            <fieldset>
+                <legend>Farben</legend>
+                <label for="backgroundColor">Hintergrundfarbe:</label>
+                <input type="color" name="backgroundColor" value="#ffffff" id="backgroundColor">
+                <br>
+                <label for="cardBackColor">Kartenrückseite:</label>
+                <input type="color" name="cardBackColor" value="#0000ff" id="cardBackColor">
+                <br>
+                <label for="fontColor">Schriftfarbe:</label>
+                <input type="color" name="fontColor" value="#000000" id="fontColor">
+            </fieldset>
+            <fieldset>
+                <legend>Schriftarten</legend>
+                <label for="fontHelvetica" id="fontHelveticaLabel">Helvetica</label>
+                <input type="radio" name="fontFamily" value="Helvetica" checked id="fontHelvetica">
+                <br>
+                <label for="Comic Sans" id="fontComicSansLabel">Comic Sans</label>
+                <input type="radio" name="fontFamily" value="Comic Sans MS" id="fontComicSans">
+                <br>
+                <label for="Times New Roman" id="fontTimesNewRomanLabel">Times New Roman</label>
+                <input type="radio" name="fontFamily" value="Times New Roman" id="fontTimesNewRoman">
+            </fieldset>
+        </form>
+        <input type="submit" id="startButton" value="Start">
+    </div>
+    <div id="playingArea" class="hidden"></div>
+
+
+
+</body>
+
+</html>
