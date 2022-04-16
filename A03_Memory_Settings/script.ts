@@ -90,7 +90,7 @@ namespace Memory {
                     let firstCardClickedSpan: HTMLSpanElement = firstCardClicked.querySelector("span");
                     let firstCardValue: string = firstCardClickedSpan.innerHTML;
                     locked = true;
-                    
+
                     // Die Funktion setTimeout() ruft nach der gegebenen Zeitspanne (in ms) die anonyme Funktion auf.
                     // https://developer.mozilla.org/de/docs/Web/API/setTimeout
                     setTimeout(function (): void {
@@ -105,7 +105,7 @@ namespace Memory {
                                 let durationInMs: number = endTimeStamp.getTime() - startTimeStamp.getTime();
                                 let minutes: number = Math.floor(durationInMs / 60000);
                                 let seconds: number = Math.floor((durationInMs % 60000) / 1000);
-                                alert("Glückwunsch! Duration: " + minutes + "min " + seconds + "s");
+                                alert("Glückwunsch! Dauer: " + minutes + "min " + seconds + "s");
 
                             }
                         } else {

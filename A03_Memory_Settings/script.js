@@ -97,7 +97,7 @@ var Memory;
                                 var durationInMs = endTimeStamp.getTime() - startTimeStamp.getTime();
                                 var minutes = Math.floor(durationInMs / 60000);
                                 var seconds = Math.floor((durationInMs % 60000) / 1000);
-                                alert("Glückwunsch! Duration: " + minutes + "min " + seconds + "s");
+                                alert("Glückwunsch! Dauer: " + minutes + "min " + seconds + "s");
                             }
                         }
                         else {
