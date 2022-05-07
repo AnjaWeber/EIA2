@@ -1,3 +1,4 @@
+//Zusammenarbeit mit Lisa Fodor
 namespace GenerativeKunstAnja {
     window.addEventListener("load", handleLoad);
 

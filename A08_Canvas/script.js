@@ -1,3 +1,4 @@
+//Zusammenarbeit mit Lisa Fodor
 var GenerativeKunstAnja;
 (function (GenerativeKunstAnja) {
     window.addEventListener("load", handleLoad);
