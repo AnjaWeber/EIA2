@@ -1,5 +1,5 @@
-var GenerativeKunstisa;
-(function (GenerativeKunstisa) {
+var GenerativeKunstAnja;
+(function (GenerativeKunstAnja) {
     window.addEventListener("load", handleLoad);
     var crc2;
     var crc3;
@@ -47,5 +47,5 @@ var GenerativeKunstisa;
             crc3.fill();
         }
     }
-})(GenerativeKunstisa || (GenerativeKunstisa = {}));
+})(GenerativeKunstAnja || (GenerativeKunstAnja = {}));
 //# sourceMappingURL=script.js.map
