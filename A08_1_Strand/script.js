@@ -12,20 +12,27 @@ var BeachSceneAnja;
         drawBeach({ x: 0, y: 300 });
         drawCloud({ x: 600, y: 125 }, { x: 150, y: 75 });
         drawCloud({ x: 200, y: 145 }, { x: 120, y: 65 });
-        drawBush({ x: 60, y: 500 }, { x: 120, y: 100 });
-        drawBush({ x: 720, y: 600 }, { x: 180, y: 80 });
-        drawBoat({ x: 150, y: 160 }, { x: 1, y: 1 }, "#f3c4cf");
-        drawBoat({ x: 600, y: 150 }, { x: 0.5, y: 0.5 }, "#CCBBEE");
+        drawBoat({ x: 250, y: 180 }, { x: -1, y: 1 }, "#f3c4cf");
+        drawBoat({ x: 400, y: 155 }, { x: 0.5, y: 0.5 }, "#CCBBEE");
         drawTowel2({ x: 300, y: 400 });
-        drawPerson({ x: 300, y: 410 }, 'shirt', "#8800FF");
-        drawPerson({ x: 410, y: 420 }, 'skirt', '#C4FAF8');
+        drawPerson({ x: 300, y: 410 }, "shirt", "#8800FF");
+        drawPerson({ x: 410, y: 420 }, "skirt", "#C4FAF8");
         drawSwimmer({ x: 300, y: 220 }, { x: 0.5, y: 0.5 });
         drawSwimmer({ x: 400, y: 290 }, { x: 1, y: 1 });
         drawSurfBoard({ x: 540, y: 290 });
         drawSurfer({ x: 500, y: 200 });
         drawTowel1({ x: 500, y: 400 });
         drawTowel3({ x: 200, y: 400 });
-        drawMoewe({ x: 100, y: 400 });
+        drawMoewe({ x: 650, y: 100 }, { x: 1, y: 1 });
+        drawMoewe({ x: 600, y: 400 }, { x: 1.5, y: 1.5 });
+        drawMoewe({ x: 600, y: 75 }, { x: 0.5, y: 0.5 });
+        drawMoewe({ x: 700, y: 60 }, { x: 0.3, y: 0.3 });
+        drawMoewe({ x: 100, y: 75 }, { x: 0.5, y: 0.5 });
+        drawPalmTrunk({ x: 700, y: 200 }, { x: 1, y: 1 });
+        drawPalmTrunk({ x: 160, y: 170 }, { x: -0.8, y: 0.9 });
+        drawBush({ x: 60, y: 500 }, { x: 120, y: 100 });
+        drawBush({ x: 720, y: 600 }, { x: 180, y: 80 });
+        drawMoewe({ x: 490, y: 550 }, { x: 1.8, y: 1.8 });
     }
     function drawSky(_position) {
         crc2.save();
@@ -138,7 +145,7 @@ var BeachSceneAnja;
         crc2.scale(_scale.x, _scale.y);
         crc2.beginPath();
         crc2.moveTo(0, 75);
-        crc2.bezierCurveTo(25, 130, 75, 130, 100, 75);
+        crc2.bezierCurveTo(25, 110, 75, 110, 100, 75);
         crc2.closePath();
         crc2.stroke();
         crc2.fillStyle = _boatColor;
@@ -273,7 +280,6 @@ var BeachSceneAnja;
         crc2.fillStyle = "#FEC7B2";
         crc2.fill();
         //Körper
-        //linker Arm
         crc2.beginPath();
         crc2.moveTo(37.5, 20);
         crc2.lineTo(12.5, 37.5);
@@ -281,9 +287,9 @@ var BeachSceneAnja;
         crc2.lineTo(25, 42);
         crc2.lineTo(25, 57);
         crc2.lineTo(50, 57);
-        crc2.lineTo(50, 42);
-        crc2.lineTo(60, 45);
-        crc2.lineTo(62.5, 37.5);
+        crc2.lineTo(50, 30);
+        crc2.lineTo(65, 7.5);
+        crc2.lineTo(62.5, 0);
         crc2.closePath();
         crc2.stroke();
         crc2.fillStyle = "#FEC7B2";
@@ -294,7 +300,7 @@ var BeachSceneAnja;
         crc2.fillStyle = "#FEC7B2";
         crc2.fill();
         crc2.beginPath();
-        crc2.arc(62.5, 42, 5, 0, 2 * Math.PI);
+        crc2.arc(64, 3, 5, 0, 2 * Math.PI);
         crc2.stroke();
         crc2.fillStyle = "#FEC7B2";
         crc2.fill();
@@ -404,26 +410,83 @@ var BeachSceneAnja;
         crc2.fill();
         crc2.restore();
     }
-    function drawMoewe(_position) {
+    function drawMoewe(_position, _scale) {
+        crc2.save();
+        crc2.translate(_position.x, _position.y);
+        crc2.scale(_scale.x, _scale.y);
         crc2.beginPath();
-        crc2.moveTo(650, 100);
-        crc2.quadraticCurveTo(685, 75, 700, 100);
-        crc2.moveTo(700, 100);
-        crc2.quadraticCurveTo(720, 75, 750, 100);
-        crc2.moveTo(750, 100);
-        crc2.quadraticCurveTo(720, 86, 700, 100);
-        crc2.moveTo(700, 100);
-        crc2.quadraticCurveTo(685, 86, 650, 100);
+        crc2.moveTo(0, 0);
+        // crc2.moveTo(650, 100);
+        crc2.quadraticCurveTo(35, -25, 50, 0);
+        crc2.quadraticCurveTo(70, -25, 100, 0);
+        crc2.quadraticCurveTo(70, -14, 50, 0);
+        crc2.quadraticCurveTo(35, -14, 0, 0);
         crc2.strokeStyle = "#000000";
         crc2.fillStyle = "#FFFFFF";
         crc2.stroke();
         crc2.fill();
+        //Kopf
         crc2.beginPath();
-        // crc2.moveTo(_position.x, _position.y);
-        crc2.arc(_position.x + 600, _position.y - 300, 8, 0, 2 * Math.PI);
+        crc2.arc(50, 0, 7.5, 0, 2 * Math.PI);
         crc2.stroke();
         crc2.fillStyle = "#FFFFFF";
         crc2.fill();
+        //Schnabel
+        crc2.beginPath();
+        crc2.moveTo(47, 0);
+        crc2.lineTo(50, 5);
+        crc2.lineTo(53, 0);
+        crc2.closePath();
+        crc2.stroke();
+        crc2.fillStyle = "#FF8800";
+        crc2.fill();
+        crc2.restore();
+    }
+    function drawPalmTrunk(_position, _scale) {
+        //Stamm
+        crc2.save();
+        crc2.translate(_position.x, _position.y);
+        crc2.scale(_scale.x, _scale.y);
+        crc2.beginPath();
+        crc2.moveTo(0, 0);
+        crc2.lineTo(30, 0);
+        crc2.bezierCurveTo(70, 50, 90, 150, 90, 250);
+        crc2.lineTo(60, 250);
+        crc2.bezierCurveTo(60, 150, 40, 50, 0, 0);
+        crc2.closePath();
+        crc2.fillStyle = "#5B3A24";
+        crc2.fill();
+        crc2.stroke();
+        //Krone
+        crc2.save();
+        crc2.translate(15, 0);
+        var scaleList = [{ x: 1, y: 1 }, { x: -1, y: 1 }];
+        var angleList = [25, -25, 0];
+        for (var _i = 0, scaleList_1 = scaleList; _i < scaleList_1.length; _i++) {
+            var scale = scaleList_1[_i];
+            crc2.save();
+            crc2.scale(scale.x, scale.y);
+            for (var _a = 0, angleList_1 = angleList; _a < angleList_1.length; _a++) {
+                var angle = angleList_1[_a];
+                crc2.save();
+                crc2.rotate(angle * Math.PI / 180);
+                crc2.beginPath();
+                crc2.moveTo(0, 0);
+                crc2.bezierCurveTo(70, 12.5, 125, 30, 170, 75);
+                crc2.bezierCurveTo(140, 0, 75, -70, 0, 0);
+                var gradient = crc2.createLinearGradient(0, 0, 170, 75);
+                gradient.addColorStop(0, "#008800");
+                gradient.addColorStop(.5, "#98FF98");
+                gradient.addColorStop(1, "#53753C");
+                crc2.fillStyle = gradient;
+                crc2.fill();
+                crc2.stroke();
+                crc2.restore();
+            }
+            crc2.restore();
+        }
+        crc2.restore();
+        crc2.restore();
     }
 })(BeachSceneAnja || (BeachSceneAnja = {}));
 //# sourceMappingURL=script.js.map
