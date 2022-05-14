@@ -28,8 +28,8 @@ var BeachSceneAnja;
         drawMoewe({ x: 600, y: 75 }, { x: 0.5, y: 0.5 });
         drawMoewe({ x: 700, y: 60 }, { x: 0.3, y: 0.3 });
         drawMoewe({ x: 100, y: 75 }, { x: 0.5, y: 0.5 });
-        drawPalmTrunk({ x: 700, y: 200 }, { x: 1, y: 1 });
-        drawPalmTrunk({ x: 160, y: 170 }, { x: -0.8, y: 0.9 });
+        drawPalmTree({ x: 700, y: 200 }, { x: 1, y: 1 });
+        drawPalmTree({ x: 160, y: 170 }, { x: -0.8, y: 0.9 });
         drawBush({ x: 60, y: 500 }, { x: 120, y: 100 });
         drawBush({ x: 720, y: 600 }, { x: 180, y: 80 });
         drawMoewe({ x: 490, y: 550 }, { x: 1.8, y: 1.8 });
@@ -442,7 +442,7 @@ var BeachSceneAnja;
         crc2.fill();
         crc2.restore();
     }
-    function drawPalmTrunk(_position, _scale) {
+    function drawPalmTree(_position, _scale) {
         //Stamm
         crc2.save();
         crc2.translate(_position.x, _position.y);
