@@ -57,13 +57,13 @@ namespace BeachSceneAnimationAnja {
             bush1.draw();
             bush2.draw();
             moewe1.draw();
-            moewe1.move(0.02);
+            moewe1.move(0.1);
             moewe2.draw();
             moewe2.move(0.03);
             moewe3.draw();
             moewe3.move(0.04);
             moewe4.draw();
-            moewe4.move(0.05);
+            moewe4.move(0.1);
             moewe5.draw();
             moewe5.move(0.05);
             moewe6.draw();
