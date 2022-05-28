@@ -10,7 +10,7 @@ namespace BeachSceneAnimationAnja {
             this.position = _position;
             this.scale = _scale;
             this.color = _color;
-            this.velocity= new Vector (100, 0);
+            this.velocity = new Vector (100, 0);
         }
 
         move(_timeslice: number): void {

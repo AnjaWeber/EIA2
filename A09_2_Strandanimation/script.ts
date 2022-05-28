@@ -69,16 +69,5 @@ namespace BeachSceneAnimationAnja {
             moewe6.draw();
             moewe6.move(0.02);
         }, 20);
-
-
-
-
     }
-
-
-
-
-
-
-
 }
