@@ -22,15 +22,15 @@ namespace BeachSceneAnimationAnja {
         let surfboard: Surfboard = new Surfboard(new Vector(540, 290));
         let surfer: Surfer = new Surfer(new Vector(500, 200));
         let moewe1: Moewe = new Moewe(new Vector(650, 100), new Vector(1, 1));
-        let moewe2: Moewe = new Moewe(new Vector(600, 400), new Vector(1.5, 1.5));
-        let moewe3: Moewe = new Moewe(new Vector(600, 75), new Vector(0.5, 0.5));
-        let moewe4: Moewe = new Moewe(new Vector(700, 60), new Vector(0.7, 0.7));
-        let moewe5: Moewe = new Moewe(new Vector(100, 75), new Vector(0.8, 0.8));
+        let moewe2: Moewe = new Moewe(new Vector(600, 400), new Vector(1.1, 1.1));
+        let moewe3: Moewe = new Moewe(new Vector(600, 75), new Vector(0.9, 0.9));
+        let moewe4: Moewe = new Moewe(new Vector(700, 60), new Vector(1.2, 1.3));
+        let moewe5: Moewe = new Moewe(new Vector(100, 75), new Vector(1.3, 1.3));
         let palmtree1: PalmTree = new PalmTree(new Vector(700, 200), new Vector(1, 1));
         let palmtree2: PalmTree = new PalmTree(new Vector(160, 170), new Vector(-0.8, 0.9));
         let bush1: Bush = new Bush(new Vector(60, 500), new Vector(120, 100));
         let bush2: Bush = new Bush(new Vector(720, 600), new Vector(180, 80));
-        let moewe6: Moewe = new Moewe(new Vector(490, 550), new Vector(1.8, 1.8));
+        let moewe6: Moewe = new Moewe(new Vector(490, 550), new Vector(1.5, 1.5));
 
         setInterval(function () {
             sky.draw();
