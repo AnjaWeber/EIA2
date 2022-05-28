@@ -39,6 +39,7 @@ var BeachSceneAnimationAnja;
             cloud2.draw();
             cloud2.move(0.015);
             swimmer1.draw();
+            swimmer1.move(0.01);
             boat1.draw();
             boat1.move(0.025);
             boat2.draw();

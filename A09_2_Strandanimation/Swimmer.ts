@@ -3,15 +3,32 @@ namespace BeachSceneAnimationAnja {
     export class Swimmer {
         position: Vector;
         scale: Vector;
+        velocity: Vector;
 
         constructor(_position: Vector, _scale: Vector) {
             this.position = _position;
-            this.scale = _scale
+            this.scale = _scale;
+            this.velocity = new Vector (100, 0);
 
         }
 
         move(_timeslice: number): void {
-            // TODO
+            let offset: Vector = new Vector(this.velocity.x, this.velocity.y);
+            offset.scale(_timeslice);
+            this.position.add(offset);
+
+            if (this.position.x < 0) {
+                this.position.x += crc2.canvas.width;
+            }
+            if (this.position.y < 0) {
+                this.position.y += crc2.canvas.height;
+            }
+            if (this.position.x > crc2.canvas.width) {
+                this.position.x -= crc2.canvas.width;
+            }
+            if (this.position.y > crc2.canvas.height) {
+                this.position.y -= crc2.canvas.height;
+            }
         }
 
         draw(): void {
