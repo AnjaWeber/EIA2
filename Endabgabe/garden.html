@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Garden Simulator</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="Vector.js"></script>
+        <script src="Price.js"></script>
+        <script src="UserAction.js"></script>
+        <script src="CropType.js"></script>
+        <script src="GardenElement.js"></script>
+        <script src="Parasite.js"></script>
+        <script src="EmptyField.js"></script>
+        <script src="PlantedField.js"></script>
+        <script src="Pumpkin.js"></script>
+        <script src="Tomato.js"></script>
+        <script src="Sunflower.js"></script>
+        <script src="Salad.js"></script>
+        <script src="Strawberry.js"></script>
+        <script src="Main.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Garden Simulator</h1>
+        </header>
+        <main>
+            <div id="setup" class="setup">
+                <form>
+                    <fieldset>
+                        <legend>Player</legend>
+                        <fieldset>
+                            <legend>Seed capital (€)</legend>
+                            <input type="number" name="seedCapital" min="1" max="1000000" step="1" value="500" />
+                        </fieldset>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Market price ranges</legend>
+                        <fieldset>
+                            <legend>Buy</legend>
+                            <fieldset>
+                                <legend>pumpkin seedling</legend>
+                                <label for="pumpkinSeedlingMinPurchasePrice">Min (€):</label>
+                                <input id="pumpkinSeedlingMinPurchasePrice" type="number" name="minPumpkinSeedling" min="0" max="1000" value="5" />
+                                <label for="pumpkinSeedlingMaxPurchasePrice">Max (€):</label>
+                                <input id="pumpkinSeedlingMaxPurchasePrice" type="number" name="maxPumpkinSeedling" min="0" max="1000" value="10" />
+                            </fieldset>
+                            <fieldset>
+                                <legend>tomato seedling</legend>
+                                <label for="tomatoSeedlingMinPurchasePrice">Min (€):</label>
+                                <input id="tomatoSeedlingMinPurchasePrice" type="number" name="minTomatoSeedling" min="0" max="1000" value="5" />
+                                <label for="tomatoSeedlingMaxPurchasePrice">Max (€):</label>
+                                <input id="tomatoSeedlingMaxPurchasePrice" type="number" name="maxTomatoSeedling" min="0" max="1000" value="10" />
+                            </fieldset>
+                            <fieldset>
+                                <legend>sunflower seedling</legend>
+                                <label for="sunflowerSeedlingMinPurchasePrice">Min (€):</label>
+                                <input id="sunflowerSeedlingMinPurchasePrice" type="number" name="minSunflowerSeedling" min="0" max="1000" value="5" />
+                                <label for="sunflowerSeedlingMaxPurchasePrice">Max (€):</label>
+                                <input id="sunflowerSeedlingMaxPurchasePrice" type="number" name="maxSunflowerSeedling" min="0" max="1000" value="10" />
+                            </fieldset>
+                            <fieldset>
+                                <legend>salad seedling</legend>
+                                <label for="saladSeedlingMinPurchasePrice">Min (€):</label>
+                                <input id="saladSeedlingMinPurchasePrice" type="number" name="minSaladSeedling" min="0" max="1000" value="5" />
+                                <label for="saladSeedlingMaxPurchasePrice">Max (€):</label>
+                                <input id="saladSeedlingMaxPurchasePrice" type="number" name="maxSaladSeedling" min="0" max="1000" value="10" />
+                            </fieldset>
+                            <fieldset>
+                                <legend>strawberry seedling</legend>
+                                <label for="strawberrySeedlingMinPurchasePrice">Min (€):</label>
+                                <input id="strawberrySeedlingMinPurchasePrice" type="number" name="minStrawberrySeedling" min="0" max="1000" value="5" />
+                                <label for="strawberrySeedlingMaxPurchasePrice">Max (€):</label>
+                                <input id="strawberrySeedlingMaxPurchasePrice" type="number" name="maxStrawberrySeedling" min="0" max="1000" value="10" />
+                            </fieldset>
+                            <fieldset>
+                                <legend>fertilizer</legend>
+                                <label for="fertilizerMinPurchasePrice">Min (€):</label>
+                                <input id="fertilizerMinPurchasePrice" type="number" name="minFertilizer" min="0" max="1000" value="5" />
+                                <label for="fertilizerMaxPurchasePrice">Max (€):</label>
+                                <input id="fertilizerMaxPurchasePrice" type="number" name="maxFertilizer" min="0" max="1000" value="10" />
+                            </fieldset>
+                            <fieldset>
+                                <legend>pesticide</legend>
+                                <label for="pesticideMinPurchasePrice">Min (€):</label>
+                                <input id="pesticideMinPurchasePrice" type="number" name="minPesticide" min="0" max="1000" value="5" />
+                                <label for="pesticideMaxPurchasePrice">Max (€):</label>
+                                <input id="pesticideMaxPurchasePrice" type="number" name="maxPesticide" min="0" max="1000" value="10" />
+                            </fieldset>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Sell (€)</legend>
+                            <fieldset>
+                                <legend>pumpkin</legend>
+                                <label for="pumpkinMinSellingPrice">Min (€):</label>
+                                <input id="pumpkinMinSellingPrice" type="number" name="minPumpkin" min="0" max="1000" value="15" />
+                                <label for="pumpkinMaxSellingPrice">Max (€):</label>
+                                <input id="pumpkinMaxSellingPrice" type="number" name="maxPumpkin" min="0" max="1000" value="45" />
+                            </fieldset>
+                            <fieldset>
+                                <legend>tomato</legend>
+                                <label for="tomatoMinSellingPrice">Min (€):</label>
+                                <input id="tomatoMinSellingPrice" type="number" name="minTomato" min="0" max="1000" value="15" />
+                                <label for="tomatoMaxSellingPrice">Max (€):</label>
+                                <input id="tomatoMaxSellingPrice" type="number" name="maxTomato" min="0" max="1000" value="45" />
+                            </fieldset>
+                            <fieldset>
+                                <legend>sunflower</legend>
+                                <label for="sunflowerMinSellingPrice">Min (€):</label>
+                                <input id="sunflowerMinSellingPrice" type="number" name="minSunflower" min="0" max="1000" value="15" />
+                                <label for="sunflowerMaxSellingPrice">Max (€):</label>
+                                <input id="sunflowerMaxSellingPrice" type="number" name="maxSunflower" min="0" max="1000" value="45" />
+                            </fieldset>
+                            <fieldset>
+                                <legend>salad</legend>
+                                <label for="saladMinSellingPrice">Min (€):</label>
+                                <input id="saladMinSellingPrice" type="number" name="minSalad" min="0" max="1000" value="15" />
+                                <label for="saladMaxSellingPrice">Max (€):</label>
+                                <input id="saladMaxSellingPrice" type="number" name="maxSalad" min="0" max="1000" value="45" />
+                            </fieldset>
+                            <fieldset>
+                                <legend>strawberry</legend>
+                                <label for="strawberryMinSellingPrice">Min (€):</label>
+                                <input id="strawberryMinSellingPrice" type="number" name="minStrawberry" min="0" max="1000" value="15" />
+                                <label for="strawberryMaxSellingPrice">Max (€):</label>
+                                <input id="strawberryMaxSellingPrice" type="number" name="maxStrawberry" min="0" max="1000" value="45" />
+                            </fieldset>
+                        </fieldset>
+                    </fieldset>
+                </form>
+                <button id="start">START</button>
+            </div>
+            <div id="game" class="game hidden">
+                <canvas id="canvas" height="775px" width="1225px"></canvas>
+                <div>
+                    <div id="gameTime">Day: 0, 0:0</div>
+                    <div class="actions">
+                        <button id="plantPumpkin">Plant pumpkin 🎃</button>
+                        <button id="plantTomato">Plant tomato 🍅</button>
+                        <button id="plantSunflower">Plant sunflower 🌻</button>
+                        <button id="plantSalad">Plant salad 🥗</button>
+                        <button id="plantStrawberry">Plant strawberry 🍓</button>
+                        <button id="waterField">Water 💦</button>
+                        <button id="fertilizeField">Fertilize 💩</button>
+                        <button id="fightPest">Fight pest 🪰</button>
+                        <button id="harvestField">Harvest 🚜</button>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <h4>Current balance</h4>
+                        <p><span id="playerMoney">0</span>€</p>
+                    </div>
+                    <div>
+                        <h4>Current market prices</h4>
+                        <div>
+                            <h5>Buy</h5>
+                            <p>
+                                Pumpkin seedling:
+                                <span id="pumpkinSeedlingPrice">9999</span>€
+                            </p>
+                            <p>
+                                Tomato seedling:
+                                <span id="tomatoSeedlingPrice">9999</span>€
+                            </p>
+                            <p>
+                                Sunflower seedling:
+                                <span id="sunflowerSeedlingPrice">9999</span>€
+                            </p>
+                            <p>
+                                Salad seedling:
+                                <span id="saladSeedlingPrice">9999</span>€
+                            </p>
+                            <p>
+                                Strawberry seedling:
+                                <span id="strawberrySeedlingPrice">9999</span>€
+                            </p>
+                            <p>
+                                Fertilizer:
+                                <span id="fertilizerPrice">9999</span>€
+                            </p>
+                            <p>
+                                Pesticide:
+                                <span id="pesticidePrice">9999</span>€
+                            </p>
+                        </div>
+                        <div>
+                            <h5>Sell</h5>
+                            <p>
+                                Pumpkin:
+                                <span id="pumpkinSellingPrice">9999</span>€
+                            </p>
+                            <p>
+                                Tomato:
+                                <span id="tomatoSellingPrice">9999</span>€
+                            </p>
+                            <p>
+                                Sunflower:
+                                <span id="sunflowerSellingPrice">9999</span>€
+                            </p>
+                            <p>
+                                Salad:
+                                <span id="saladSellingPrice">9999</span>€
+                            </p>
+                            <p>
+                                Strawberry:
+                                <span id="strawberrySellingPrice">9999</span>€
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            Anja Weber
+        </footer>
+    </body>
+</html>
